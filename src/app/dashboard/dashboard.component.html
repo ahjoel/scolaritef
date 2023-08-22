@@ -1,0 +1,159 @@
+<body id="page-top">
+    
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+
+            <!-- Sidebar - Brand -->
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" [routerLink]="['/']">
+                <div class="sidebar-brand-icon rotate-n-15">
+                    <i class="fas fa-credit-card"></i>
+                </div>
+                <div class="sidebar-brand-text mx-3">SCHOOLFE<sup></sup></div>
+            </a>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider my-0">
+
+            <!-- Nav Item - Dashboard -->
+            <li class="nav-item" routerLinkActive="active" [class.active]="router.isActive('/', true)">
+                <a class="nav-link" routerLink="/">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>Accueil</span></a>
+            </li>
+            
+            <!-- Nav Item - Tables -->
+            <li class="nav-item" routerLinkActive="active" [class.active]="router.isActive('/annee', true)"
+            [class.active]="router.isActive('/annee/add_annee', true)" 
+            [class.active]="router.isActive('/annee/edit_employe', true)">
+                <a class="nav-link" routerLink="/annee">
+                    <i class="fas fa-calendar-alt"></i>
+                    <span>Année Academique</span></a>
+            </li>
+
+            <!-- Nav Item - Tables -->
+            <li class="nav-item" routerLinkActive="active" [class.active]="router.isActive('/categorie', true)"
+            [class.active]="router.isActive('/categorie/add_categorie', true)" 
+            [class.active]="router.isActive('/categorie/edit_categorie', true)">
+                <a class="nav-link" routerLink="/categorie">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span>Formation</span></a>
+            </li>
+
+            <!-- Nav Item - Tables -->
+            <li class="nav-item" routerLinkActive="active" [class.active]="router.isActive('/fourniture', true)"
+            [class.active]="router.isActive('/fourniture/add_fourniture', true)"
+            [class.active]="router.isActive('/fourniture/edit_fourniture', true)">
+                <a class="nav-link" routerLink="/fourniture">
+                    <i class="fas fa-user-graduate"></i>
+                    <span>Etudiant</span></a>
+            </li>
+
+            <!-- Nav Item - Tables -->
+            <li class="nav-item" routerLinkActive="active" [class.active]="router.isActive('/lignecommande', true)"
+             [class.active]="router.isActive('/lignecommande/ajout_lignecommande', true)">
+                <a class="nav-link" routerLink="/lignecommande">
+                    <i class="fas fa-credit-card"></i>
+                    <span>Payement</span></a>
+            </li>
+
+            <!-- Nav Item - Tables -->
+            <li class="nav-item" routerLinkActive="active" [class.active]="router.isActive('/lignecommande', true)"
+            [class.active]="router.isActive('/lignecommande/ajout_lignecommande', true)">
+                <a class="nav-link" routerLink="/lignecommande">
+                    <i class="fas fa-envelope"></i>
+                    <span>Notification Payement</span></a>
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider">
+
+            <!-- Heading -->
+            <div class="sidebar-heading">
+                Statistiques
+            </div>
+            
+            <!-- Nav Item -->
+            <li class="nav-item" routerLinkActive="active" [class.active]="router.isActive('/etatsortie', true)">
+                <a class="nav-link" routerLink="/etatsortie">
+                    <i class="fas fa-fw fa-chart-area"></i>
+                    <span>Etat Payement</span></a>
+            </li>
+            
+            <!-- Nav Item -->
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                    <i class="fas fa-fw fa-chart-area"></i>
+                    <span>Etat Notification Payement</span></a>
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider d-none d-md-block">
+
+            <!-- Sidebar Toggler (Sidebar) -->
+            <div class="text-center d-none d-md-inline">
+                <button class="rounded-circle border-0" id="sidebarToggle"></button>
+            </div>
+
+        
+
+        </ul>
+        <!-- End of Sidebar -->
+
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            <!-- Main Content -->
+            <div id="content">
+
+                <!-- Topbar -->
+                <app-header></app-header>
+                <!-- End of Topbar -->
+
+                <!-- Begin Page Content -->
+                <div class="container-fluid">
+
+                    <router-outlet></router-outlet>
+
+                </div>
+                <!-- /.container-fluid -->
+
+            </div>
+            <!-- End of Main Content -->
+
+            <!-- Footer -->
+            
+            <!-- End of Footer -->
+
+        </div>
+        <!-- End of Content Wrapper -->
+
+    </div>
+    <!-- End of Page Wrapper -->
+
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="javascript:void(0);" (click)="scrollToTop()">
+        <i class="fas fa-angle-up"></i>
+    </a>
+
+    <!-- Logout Modal-->
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Voudriez-vous quitter la session?</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">Cliquez sur Déconnexion pour fermer cette session.</div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Annuler</button>
+                    <a class="btn btn-primary" (click)="onLogout()" data-dismiss="modal">Déconnexion</a>
+                </div>
+            </div>
+        </div>
+    </div>
