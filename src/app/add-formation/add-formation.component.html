@@ -1,0 +1,58 @@
+<ng-container *ngIf="message">
+    <div class="alert alert-dismissible fade show text-left message col-md-4 ml-auto"
+        [ngClass]="{'alert-success': !isError, 'alert-danger': isError}" role="alert">
+        {{ message }}
+        <button type="button" class="close btn-sm" (click)="message = null" aria-label="Close">
+            <span aria-hidden="true">×</span>
+        </button>
+    </div>
+</ng-container>
+
+<!-- Page Heading -->
+<div class="d-sm-flex align-items-center justify-content-between mb-4">
+    <h1 class="h3 mb-0 text-gray-800">Formation</h1>
+    <a routerLink="/formation" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
+            class="fas fa-plus fa-sm text-white-50"></i> Liste Formation</a>
+</div>
+
+<!-- Basic Card Example -->
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">Enregistrement - Formation</h6>
+    </div>
+    <div class="card-body">
+        <form #formFormation="ngForm">
+            <div class="form-row">
+                <div class="form-group col-md-3">
+                    <label for="inputEmail4">Code Formation</label>
+                    <input type="text" class="form-control" name="codeAn" required [(ngModel)]="newFormation.codeFor"
+                        id="inputEmail4" placeholder="Code Formation">
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="inputPassword6">Libellé</label>
+                    <input type="text" class="form-control" name="libelleAn" required [(ngModel)]="newFormation.libelleFor"
+                        id="inputPassword6" placeholder="Libellé">
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="inputPassword5">Scolarite</label>
+                    <input type="number" class="form-control" name="scolarite" required [(ngModel)]="newFormation.scolarite"
+                        id="inputPassword5">
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="inputPassword5">Année Academique</label>
+                    <select class="form-control" name="newIdAnnee" [(ngModel)]="newIdAnnee">
+                        <option selected value="">Choisir une année academique</option>
+                        <option *ngFor="let an of annees" [value]="an.id">
+                            {{an.libelleAn}}
+                        </option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="col text-right">
+                <button type="reset" class="btn btn-warning">Annuler</button>
+                <button type="submit" [disabled]="formFormation.invalid" (click)="addFormation()" style="margin-left: 5px;" class="btn btn-primary">Enregistrer</button>
+            </div>
+        </form>
+    </div>
+</div>
