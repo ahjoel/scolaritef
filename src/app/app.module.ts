@@ -14,6 +14,12 @@ import { EditAnneeAcademiqueComponent } from './edit-annee-academique/edit-annee
 import { ListFormationComponent } from './list-formation/list-formation.component';
 import { AddFormationComponent } from './add-formation/add-formation.component';
 import { EditFormationComponent } from './edit-formation/edit-formation.component';
+import { ListEtudiantComponent } from './list-etudiant/list-etudiant.component';
+import { AddEtudiantComponent } from './add-etudiant/add-etudiant.component';
+import { EditEtudiantComponent } from './edit-etudiant/edit-etudiant.component';
+import { ListPayementComponent } from './list-payement/list-payement.component';
+import { AddPayementComponent } from './add-payement/add-payement.component';
+import { EditPayementComponent } from './edit-payement/edit-payement.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +33,12 @@ import { EditFormationComponent } from './edit-formation/edit-formation.componen
     ListFormationComponent,
     AddFormationComponent,
     EditFormationComponent,
+    ListEtudiantComponent,
+    AddEtudiantComponent,
+    EditEtudiantComponent,
+    ListPayementComponent,
+    AddPayementComponent,
+    EditPayementComponent,
   ],
   imports: [
     BrowserModule,

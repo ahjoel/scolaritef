@@ -41,7 +41,7 @@ export class AddFormationComponent {
           false
         );
         this.newFormation = new Formation();
-        this.newFormation.anneeAcademique = null;
+        this.newIdAnnee = null;
         this.router.navigate(['/formation/add_formation']);
       },
       (error) => {
