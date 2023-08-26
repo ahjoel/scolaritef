@@ -14,7 +14,6 @@ import { EditAnneeAcademiqueComponent } from './edit-annee-academique/edit-annee
 import { ListFormationComponent } from './list-formation/list-formation.component';
 import { AddFormationComponent } from './add-formation/add-formation.component';
 import { EditFormationComponent } from './edit-formation/edit-formation.component';
-import { NotificationMailComponent } from './notification-mail/notification-mail.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +27,6 @@ import { NotificationMailComponent } from './notification-mail/notification-mail
     ListFormationComponent,
     AddFormationComponent,
     EditFormationComponent,
-    NotificationMailComponent,
   ],
   imports: [
     BrowserModule,

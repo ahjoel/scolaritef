@@ -3,7 +3,6 @@ import { Formation } from '../model/formation.model';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { apiURLFormation } from '../config';
 import { Observable } from 'rxjs';
-import { AnneeAcademique } from '../model/annee-academique.model';
 const httpOptions = {
   headers: new HttpHeaders({ 'Content-Type': 'application/json' }),
 };
