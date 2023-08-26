@@ -20,6 +20,7 @@ import { EditEtudiantComponent } from './edit-etudiant/edit-etudiant.component';
 import { ListPayementComponent } from './list-payement/list-payement.component';
 import { AddPayementComponent } from './add-payement/add-payement.component';
 import { EditPayementComponent } from './edit-payement/edit-payement.component';
+import { NotificationMailComponent } from './notification-mail/notification-mail.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import { EditPayementComponent } from './edit-payement/edit-payement.component';
     ListPayementComponent,
     AddPayementComponent,
     EditPayementComponent,
+    NotificationMailComponent,
   ],
   imports: [
     BrowserModule,

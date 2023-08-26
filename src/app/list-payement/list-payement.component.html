@@ -53,6 +53,9 @@
                             <a (click)="supprimerPayement(payement)" class="btn btn-danger btn-circle btn-sm" style="margin-left: 5px;">
                                 <i class="fas fa-trash"></i>
                             </a>
+                            <a [routerLink]="['/notification', payement.id]" class="btn btn-danger btn-circle btn-sm" style="margin-left: 5px;">
+                                <i class="fas fa-envelope"></i>
+                            </a>
                         </td>
                     </tr>
                 </tbody>

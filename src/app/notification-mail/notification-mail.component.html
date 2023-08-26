@@ -1,0 +1,47 @@
+<ng-container *ngIf="message">
+    <div class="alert alert-dismissible fade show text-left message col-md-4 ml-auto"
+        [ngClass]="{'alert-success': !isError, 'alert-danger': isError}" role="alert">
+        {{ message }}
+        <button type="button" class="close btn-sm" (click)="message = null" aria-label="Close">
+            <span aria-hidden="true">×</span>
+        </button>
+    </div>
+</ng-container>
+
+<!-- Page Heading -->
+<div class="d-sm-flex align-items-center justify-content-between mb-4">
+    <h1 class="h3 mb-0 text-gray-800">Notification Payement</h1>
+</div>
+
+<!-- Basic Card Example -->
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">Composition de Mail</h6>
+    </div>
+    <div class="card-body">
+        <form #formMail="ngForm" autocomplete="off">
+            <div class="form-row">
+                <div class="form-group col-md-3">
+                    <label for="inputEmail4">Mail Destinataire</label>
+                    <input type="text" class="form-control" name="codeAn" required [(ngModel)]="newNotification.recipient"
+                        id="inputEmail4" placeholder="Code Formation">
+                </div>
+                <div class="form-group col-md-2">
+                    <label for="inputPassword6">Objet</label>
+                    <input type="text" class="form-control" name="libelleAn" required [(ngModel)]="newNotification.subject"
+                        id="inputPassword6" placeholder="Libellé">
+                </div>
+                <div class="form-group col-md-5">
+                    <label for="inputPassword5">Message</label>
+                    <input type="text" class="form-control" name="scolarite" required [(ngModel)]="newNotification.msgBody"
+                        id="inputPassword5">
+                </div>
+            </div>
+
+            <div class="col text-right">
+                <button type="reset" class="btn btn-warning">Annuler</button>
+                <button type="submit" [disabled]="formMail.invalid" (click)="addNotification()" style="margin-left: 5px;" class="btn btn-primary">Envoyez</button>
+            </div>
+        </form>
+    </div>
+</div>

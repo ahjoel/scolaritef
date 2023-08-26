@@ -13,6 +13,7 @@ import { EditEtudiantComponent } from './edit-etudiant/edit-etudiant.component';
 import { ListPayementComponent } from './list-payement/list-payement.component';
 import { AddPayementComponent } from './add-payement/add-payement.component';
 import { EditPayementComponent } from './edit-payement/edit-payement.component';
+import { NotificationMailComponent } from './notification-mail/notification-mail.component';
 
 const routes: Routes = [
   {path: "*", component: DashboardComponent},
@@ -28,6 +29,7 @@ const routes: Routes = [
   {path: "payement", component: ListPayementComponent},
   {path: "payement/add_payement", component: AddPayementComponent},
   {path: "payement/edit_payement/:id", component: EditPayementComponent},
+  {path: "notification/:id", component: NotificationMailComponent},
 ];
 
 @NgModule({

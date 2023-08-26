@@ -46,7 +46,7 @@
                 </div>
                 <div class="form-group col-md-3">
                     <label for="inputPassword8">Montant Reglement</label>
-                    <input type="number" class="form-control" name="montantReg" *ngIf="mtDejaRegle>=0" required [(ngModel)]="newPayement.montantReg"
+                    <input type="number" class="form-control" name="montantReg" *ngIf="mtDejaRegle>=0 || mtDejaRegle==null" required [(ngModel)]="newPayement.montantReg"
                         id="inputPassword8">
                 </div>
                 

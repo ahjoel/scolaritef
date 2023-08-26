@@ -2,3 +2,4 @@ export const apiURLAnneeAcademique: string = 'http://localhost:8080/api/anneeaca
 export const apiURLFormation: string = 'http://localhost:8080/api/formation';
 export const apiURLEtudiant: string = 'http://localhost:8080/api/etudiant';
 export const apiURLPayement: string = 'http://localhost:8080/api/payement';
+export const apiURL: string = 'http://localhost:8080/api/notification';
